@@ -23,5 +23,5 @@ def get_all_courses(skip: int = 0, limit: int = 100, db: Session = Depends(get_d
 def get_course(course_id: int, db: Session = Depends(get_db)):
     course = crud.get_course(db=db, id=course_id)
     if course is None:
-        raise HTTPException(status_code=404, detail="course not found")
+        raise HTTPException(status_code=404, detail="Сourse not found")
     return course
